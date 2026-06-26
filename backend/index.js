@@ -14,6 +14,7 @@ const pool = new Pool({
 
 app.get('/products', async (req, res) => {
   try{
+     res.json({ status: 'ok' });
     const { category, cursor_created_at, cursor_id, limit = 20 } = req.query;
 
   const values = [];
